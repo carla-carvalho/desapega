@@ -1,58 +1,504 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+}
+
+#logo{
+  text-decoration: none;
+
+}
+nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+nav p {
+  width: 6rem;
+  padding-left: 0.5rem;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(68, 105, 255);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 68, 230);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(152, 166, 224);
+  padding: 6rem 3rem 3rem 3rem;
+}
+
+#escolha{
+  font-size: large;
+}
+
+#cadit{
+  font-size: large;
+}
+
+#nomeitem{
+  font-size: large;
+}
+header article h1 {
+  color: #fff;
+  font-size: 2rem;
+
+}
+
+header article p {
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 4rem;
+}
+
+header img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+section#cursos {
+  background-color: rgb(68, 87, 255);
+  padding: 4rem;
+  display: flex;
+}
+
+
+article#title {
+  width: 50%;
+  display: flex;
+}
+
+article#title h2 {
+  padding: 1.5rem;
+}
+
+article#content h3 {
+  font-size: 1.5rem;
+  padding: 3rem 3rem 1rem 3rem;
+}
+
+article#content ul {
+  list-style: none;
+}
+
+article#content ul li {
+  padding: 1rem 1rem 1rem 3rem;
+  font-size: 1.2rem;
+}
+
+article#content a#inscrever {
+  padding: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(68, 105, 255);
+  color: #fff;
+  border-radius: 1rem;
+  border: 0.2rem solid rgb(255, 238, 0);
+  transition: 0.5s;
+  font-weight: bold;
+  position: absolute;
+  z-index: 8;
+  right: 10rem;
+  top: 33rem;
+}
+
+article#content a#inscrever:hover {
+  background-color: #fff;
+  color: rgb(68, 105, 255);
+  border: 0.2rem solid rgb(68, 105, 255);
+}
+
+section#inscrever {
+  background-color: rgb(177, 230, 255);
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section#inscrever h2 {
+  color: rgb(0, 51, 255);
+  text-align: center;
+  padding-bottom: 3rem;
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+section#inscrever form {
+  width: 50%;
+}
+
+section#inscrever form div input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+}
+
+section#inscrever form div label {
+  font-size: 1.3rem;
+}
+
+section#inscrever form button {
+  border: 1px solid #3359ec;
+  background-color: #fff;
+  color: #3359ec;
+  padding: 1rem;
+  font-size: 0.8vw;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  width: 40%;
+}
+
+section#inscrever form button:hover {
+  background-color: #3359ec;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+footer {
+  padding: 3rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #3359ec;
+  transition: 0.5s;
+}
+
+footer p a:hover {
+  color: rgb(255, 68, 230);
+}
+
+section#message {
+  padding: 1.5rem;
+  background-color: rgb(197, 255, 214);
+  color: #004d04;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span#close {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+span#close:hover{
+  color: rgb(255, 0, 0);
+  transform: scale(1.5);
+}
+
+nav article img {
+  width: 2rem;
+  height: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+header {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+header h1 {
+  color: rgb(14, 10, 34);
+  font-size: 1rem;
+  text-shadow: 0 0 1rem #00000060;
+  text-align: center;
+
+
+}
+
+
+a.card {
+  width: 20rem;
+  padding: 3rem;
+  box-shadow: 0 0 1rem #00000060;
+  margin: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+
+a.card:hover {
+  transform: scale(1.1);
+}
+
+a.card img {
+  width: 15rem;
+  height: 15rem;
+}
+
+a.card h2 {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  color: #000;
+}
+
+section#produto {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section#cadastrar {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: 0 20% 10% 20%;
+  box-shadow: 0 0 1rem #00000060;
+  border-radius: 1rem;
+
   
-  html,
-  body {
-    scroll-behavior: smooth;
-    height: 100vh;
-    width: 100%;
+}
+
+
+  header h1 {
+    
+    font-size: 3rem;
+    text-shadow: 0 0 1rem #00000060;
+    text-align: center;
+    margin-right: 5rem;
+    margin-left: 5%;
+  
   }
 
-  nav {
-    background-color: rgb(197, 212, 214);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-  }
+  header figure {
+    
   
-  p{
-    text-decoration: none;
-    color: rgb(2, 8, 31);
-    font-size: 1.2rem;
-    transition: 0.5s;  
-    margin-left: 2rem;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
+    margin-right: 10%;
   
-  nav ul li {
-    padding: 1rem;
   }
+
+
+section#cadastrar h2 {
+  color: rgb(12, 6, 6);
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
+  width: 100%;
+
+}
+
+section#cadastrar form {
+  width: 100%;
+  padding: 1rem;
+}
+
+section#cadastrar form div input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 0.1rem solid #ccc;
+}
+
+section#cadastrar form div label {
+  font-size: 1.3rem;
+  color: rgb(20, 6, 6);
+}
+
+section#cadastrar form button {
+  border: 1px solid rgb(68, 211, 255);
+  background-color: #fff;
+  color: rgb(68, 211, 255);
+  padding: 1rem;
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  width: 50%;
+}
+
+section#cadastrar form button:hover {
+  background-color: rgb(68, 211, 255);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+section#message {
+  padding: 1rem;
+  background-color: rgb(197, 255, 214);
+  color: #004d04;
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span#close {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-left: 2rem;
+}
+
+span#close:hover {
+  color: rgb(255, 0, 0);
+  transform: scale(1.2);
+}
+
+section#details {
+  margin: 0 25% 0 27%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 3rem;
+  padding-left: 4px;
+  box-shadow: 0 0 1rem #00000060;
+  max-width: 40%;
+}
+
+#details img {
+  width: 20rem; 
+}
+
+
+section#details div#infos p {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+
+  flex-wrap: wrap;
+}
+
+section#details div#infos div#info-datail {
+  background-color: #ccc;
+  display: flex;
   
-  nav ul li a {
-    text-decoration: none;
-    color: rgb(10, 10, 10);
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: 0.5s;
-  }
+  align-items: center;
+  padding: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+
+section#details div#infos h2 {
+  background-color: rgb(68, 211, 255);
+  padding: 1rem;
+  color: #fff;
+  border-radius: 1rem;
+  width: 30%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 1000px) {
   
-  nav ul li a:hover {
-    color: rgb(19, 53, 190);
+  section#cadastrar {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: 0 5% 5% 5%;
+  box-shadow: 0 0 1rem #00000060;
+  border-radius: 1rem;
+  background-color: #fff;
+  width: 60%;
+
   }
 
   
-  article p {
-    color: rgb(15, 8, 8);
-    font-size: 1.5rem;
-    margin-top: 7rem;
-    position: absolute;
-  }
+section#details {
+  margin: 0 10% 10% 20%;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color:#FFF;
+  border-radius: 2rem;
+  padding: 0% 40% 0% 40%;
+  box-shadow: 0 0 1rem #00000060;
+  margin-left: 15%;
+}
+}

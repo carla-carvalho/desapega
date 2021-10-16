@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="./img/pokedex.png"/>
+    <title>desaPega</title>
+</head>
+<body>
+         <nav>
+            <article id="logo">
+                <h1><a href="/">desa<strong>Pega</strong></a></h1>
+            </article>
+            <% if(message != "") {  %>
+                <section id="message">
+                    <p><%= message %></p> <span id="close">&times;</span>
+                </section>
+            <% }  %>
+            <ul>
+                <ul>
+                    <li><a href="/catalogo">Catálogo</a></li>
+                    <li><a href="/cadastro">Cadastrar Itens</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <header>
+            <h1 id="escolha">Escolha seu produto</h1>
+        </header>
+
+        <section id="produto">
+            <% desapega.forEach((item, index)=> { %>
+                <a class="card" href="/detalhes/<%= index %>">
+                    <img src="<%= item.imagem %>" alt="">
+                    <h2>
+                        <%= item.titulo %>
+                    </h2>
+                    <h4>
+                        <%= item.tipo %>
+                    </h4>
+                </a>
+                <% }) %>
+        </section>
+    
+        <script src="/js/script.js"></script>
+
+    </body>
+    </html>

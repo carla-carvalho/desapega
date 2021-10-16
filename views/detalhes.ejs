@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="./img/pokedex.png"/>
+    <title>Detalhes do Produto</title>
+</head>
+
+<body>
+
+    <nav>
+        <article id="logo">
+            <h1><a href="/">desa<strong>Pega</strong></a></h1>
+        </article>
+
+        <ul>
+            <li><a href="/catalogo">Catálogo</a></li>
+            <li><a href="/cadastro">Cadastrar Itens</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 id="nomeitem">
+            <%= produto.titulo %><span style="font-weight: 50"></span>
+        </h1>
+    </header>
+
+    <section id="details">
+        <img src="<%= produto.imagem %>" alt="">
+        <div id="infos">
+            <p id="descricao">
+                <%= produto.descricao %>    
+            </p>
+            <br>
+            <div id="info-datail">
+                <div class='col' id="primeiraColuna">
+                    <h4>Tipo: <%= produto.tipo %></h4>
+                
+                    <h4>Estado: <%= produto.estado %></h4>
+                
+                </div>
+            </div>
+            <br>
+        </div>
+
+
+    </section>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

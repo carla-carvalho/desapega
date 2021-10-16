@@ -5,28 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Desapega</title>
+    <link rel="icon" type="image/png" href="./img/pokedex.png"/>
+    <title>desaPega</title>
 </head>
 <body>
-    <nav>
-        <p class="brand">desa<strong>Pega</strong></p>
-        <ul>
-            <li>
-                <a href="Catálogo">Catálogo</a>
-            </li>
-            <li>
-                <a href="Cadastro">Cadastrar Itens</a>
-            </li>
-            <li>
-                <a href="inscrever">Inscreva-se</a>
-            </li>
-        </ul>
-    </nav>
+         <nav>
+            <article id="logo">
+                <h1><a href="/">desa<strong>Pega</strong></a></h1>
+            </article>
+            
+            <ul>
+                <ul>
+                    <li><a href="/catalogo">Catálogo</a></li>
+                    <li><a href="/cadastro">Cadastrar Itens</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <header>
+            <header>
+                <article>
+                    <h1>Está precisando? Pega! <br>Não precisa mais? Doe. 
+                        </h1>
+                    <p>Que tal tornar seu consumo mais consciente? </p>
+                </article>
+        
+                <img src="/img/piramide.png" class="img-fluid gif" alt="Banner">
+            </header>
+        </header>
 
-    <article>
-        <p>Está precisando? Pega! <br>Não está precisando mais? Doe!</p>
-    </article>>
+        <article id="content">
+            <h2>Você pode não perceber, mas a maneira como consumimos atualmente impacta grandiosamente no ambiente e na sociedade em geral. </h2>
+            <h3>Todo nosso consumo é problemático, e o de roupas costuma estar no topo de problemas.</h3>
 
+            <p>
+                Segundo uma pesquisa realizada pela Unicamp em 2018, no Brasil são produzidas cerca de 170 mil toneladas de resíduos de tecidos todos os anos e muito desse material é inutilizável. Os pesquisadores identificaram mais de 32 mil indústrias que fazem parte do segmento têxtil, porém apenas 21 faziam a reciclagem de tecidos, sendo 5 em São Paulo.
+
+                “O Brasil oficialmente importa mais de 223 mil toneladas de resíduos desde janeiro de 2008, a um custo de US$ 257.9 milhões. No entanto, no mesmo período, o país deixou de ganhar cerca de US$ 12 bilhões por deixar de reciclar 78% de resíduos sólidos gerados internamente, graças a falta de coleta seletiva”, afirmaram os autores do estudo. 
+                
+            </p>
+
+        </article>
+
+        <section id="produto">
+            <% desapega.forEach((item, index)=> { %>
+                <a class="card" href="/detalhes/<%= index %>">
+                    <img src="<%= item.imagem %>" alt="">
+                    <h2>
+                        <%= item.titulo %>
+                    </h2>
+                    <h4>
+                        <%= item.tipo %>
+                    </h4>
+                </a>
+                <% }) %>
+        </section>
     
-</body>
-</html>
+        <script src="/js/script.js"></script>
+
+    </body>
+    </html>
