@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" href="./img/pokedex.png"/>
+    <link rel="icon" type="image/png" href="./img/transp2.png"/>
     <title>desaPega</title>
 </head>
 <body>
          <nav>
             <article id="logo">
                 <h1><a href="/">desa<strong>Pega</strong></a></h1>
+
             </article>
             
             <ul>
-                <ul>
-                    <li><a href="/catalogo">Catálogo</a></li>
-                    <li><a href="/cadastro">Cadastrar Itens</a></li>
-                </ul>
+                    <li><a href="/doacoes">Doações</a></li>
+                    <li><a href="/doar">Doar</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/dev">DEVs</a></li>
             </ul>
         </nav>
         <header>
             <header>
                 <article>
-                    <h1>Está precisando? Pega! <br>Não precisa mais? Doe. 
-                        </h1>
-                    <p>Que tal tornar seu consumo mais consciente? </p>
+                    <h1>Está precisando? Pega! <br>Não precisa mais? Doe.</h1>
+                    <br>
+                    <p>Que tal tornar seu consumo mais consciente?</p>
                 </article>
         
                 <img src="/img/piramide.png" class="img-fluid gif" alt="Banner">
@@ -35,8 +36,9 @@
 
         <article id="content">
             <h2>Você pode não perceber, mas a maneira como consumimos atualmente impacta grandiosamente no ambiente e na sociedade em geral. </h2>
+            <br>
             <h3>Todo nosso consumo é problemático, e o de roupas costuma estar no topo de problemas.</h3>
-
+            <br>
             <p>
                 Segundo uma pesquisa realizada pela Unicamp em 2018, no Brasil são produzidas cerca de 170 mil toneladas de resíduos de tecidos todos os anos e muito desse material é inutilizável. Os pesquisadores identificaram mais de 32 mil indústrias que fazem parte do segmento têxtil, porém apenas 21 faziam a reciclagem de tecidos, sendo 5 em São Paulo.
 
@@ -46,19 +48,16 @@
 
         </article>
 
-        <section id="produto">
-            <% desapega.forEach((item, index)=> { %>
-                <a class="card" href="/detalhes/<%= index %>">
-                    <img src="<%= item.imagem %>" alt="">
-                    <h2>
-                        <%= item.titulo %>
-                    </h2>
-                    <h4>
-                        <%= item.tipo %>
-                    </h4>
-                </a>
-                <% }) %>
-        </section>
+        <article id="apresentacao">
+            <h2>Como mudar essa realidade?</h2>
+            <br>
+            <p>Pensando em todas as questões ambientais e sociais, nasceu o desa<strong>Pega</strong>. <br>Um lugar seguro de troca. Troca de materiais, afeto, energia. Mais do que um site de anúncios, uma ferramenta que pensa o consumo de forma diferente, através de doações. Sem custo, a nossa moeda é o amor.</p>
+            <button id="doar"> Doe</button>
+            <button id="pegar">Pegue</button>
+        </article>
+
+
+
     
         <script src="/js/script.js"></script>
 

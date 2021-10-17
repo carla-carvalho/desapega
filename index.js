@@ -20,22 +20,40 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/cadastro", (req, res) => {
-  res.render("cadastro");
+app.get("/doar", (req, res) => {
+  res.render("doar");
 });
 
-app.get("/catalogo", (req, res) => {
-res.render("catalogo", {
+app.get("/dev", (req, res) => {
+  res.render("dev");
+});
+
+app.get("/doacoes", (req, res) => {
+res.render("doacoes", {
   desapega,
   message
   });
 });
 
+app.get("/login", (req, res) => {
+  res.render("login", {
+    desapega,
+    message
+    });
+  });
+
+  app.get("/inscrever", (req, res) => {
+    res.render("inscrever", {
+      desapega,
+      message
+      });
+    });
+
 app.post("/new", (req, res) => {
   const produto = req.body;
   desapega.push(produto);
   message = "Item cadastrado com sucesso!";
-  res.redirect("/catalogo");
+  res.redirect("/doacoes");
 });
 
 app.get("/detalhes/:id", (req, res) => {

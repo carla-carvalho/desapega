@@ -19,14 +19,14 @@
                 </section>
             <% }  %>
             <ul>
-                <ul>
-                    <li><a href="/catalogo">Catálogo</a></li>
-                    <li><a href="/cadastro">Cadastrar Itens</a></li>
-                </ul>
+                <li><a href="/doacoes">Doações</a></li>
+                <li><a href="/doar">Doar</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/dev">DEVs</a></li>
             </ul>
         </nav>
         <header>
-            <h1 id="escolha">Escolha seu produto</h1>
+            <h1 id="escolha">Catálogo de produtos</h1>
         </header>
 
         <section id="produto">
@@ -37,7 +37,7 @@
                         <%= item.titulo %>
                     </h2>
                     <h4>
-                        <%= item.tipo %>
+                        <%= item.municipio %>
                     </h4>
                 </a>
                 <% }) %>
