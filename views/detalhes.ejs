@@ -15,10 +15,10 @@
         </article>
         
         <ul>
-            <li><a href="/doacoes">Itens disponíveis</a></li>
+            <li><a href="/doacoes">Doações disponíveis</a></li>
             <li><a href="/login">Realizar doação</a></li>
             <li><a href="/dev">Quem somos</a></li>
-    </ul>
+        </ul>
     </nav>
 
     <header>
@@ -26,6 +26,7 @@
     </header>
 
     <section id="details">
+     
         <h2 id="nomeitem">
             <%= produto.nome_produto %><span style="font-weight: 50"></span>
         </h2>
@@ -38,7 +39,7 @@
             <div id="info-datail">
                 <div class='col' id="primeiraColuna">
                     <h4>Tipo: <%= produto.tipo_produto %></h4>
-                
+                    
                     <h4>Doação: <%= produto.nome_produto %></h4>
 
                     <h4>Bairro: <%= produto.bairro %></h4>
@@ -48,9 +49,11 @@
                     <h4>Descrição da Doação: <%= produto.descricao_produto %></h4>
 
                     <br>
-                <button id="btnedit">Editar</button>
-                <button id="btndelete">Deletar item</button>
-                  </div>
+                    <button id="btnedit">Editar</button>
+                    
+                    <!-- <button id="btndelete" a href="/deletar/<%= produto.id %>">Deletar</button> -->
+                    <button id="btndelete">Deletar item</button>
+                </div>
             </div>
             <br>
         </div>
