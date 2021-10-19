@@ -22,12 +22,13 @@
     </nav>
 
     <header>
-        <h1 id="nomeitem">
-            <%= produto.titulo %><span style="font-weight: 50"></span>
-        </h1>
+       
     </header>
 
     <section id="details">
+        <h2 id="nomeitem">
+            <%= produto.titulo %><span style="font-weight: 50"></span>
+        </h2>
         <img src="<%= produto.imagem %>" alt="">
         <div id="infos">
             <p id="descricao">
@@ -45,6 +46,7 @@
                     <h4>UF: <%= produto.estado %></h4>
 
                     <h4>Informação adicional: <%= produto.info %></h4>
+
                     <br>
                 <button id="btnedit">Editar</button>
                 <button id="btndelete">Deletar item</button>

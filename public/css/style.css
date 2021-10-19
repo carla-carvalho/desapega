@@ -68,7 +68,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: rgb(68, 227, 255);
+  color: #20529C;
 }
 
 header {
@@ -152,21 +152,18 @@ article#bio{
 }
 
 section#message {
-  padding: 1.5rem;
-  background-color: rgb(197, 255, 214);
-  color: #004d04;
+  align-items: center;
   position: fixed;
-  top: 3rem;
-  left: 0;
-  right: 0;
-  z-index: 100;
+  color: #004d04;
+  background-color: rgb(197, 255, 214);
+  margin: 0 auto 100px;
+  padding: 45px;
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  
 }
 
 span#close {
@@ -310,9 +307,9 @@ section#doar form div label {
 }
 
 section#doar form button {
-  border: 1px solid rgb(68, 211, 255);
+  border: 1px solid #051D40;
   background-color: #fff;
-  color: rgb(68, 211, 255);
+  color: #051D40;
   padding: 1rem;
   font-size: medium;
   font-weight: 600;
@@ -326,7 +323,7 @@ section#doar form button {
 }
 
 section#doar form button:hover {
-  background-color: rgb(68, 211, 255);
+  background-color: #20529C;
   color: #fff;
   transform: scale(1.1);
 }
@@ -364,8 +361,8 @@ span#close:hover {
 section#details {
   margin: 0 25% 0 27%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between ;
+  align-items:center;
   background-color: #fff;
   border-radius: 2rem;
   padding: 3rem;
@@ -375,26 +372,22 @@ section#details {
 }
 
 #details img {
-  width: 20rem; 
+  width: 15rem; 
+}
+
+#nomeitem{
+  color: #000;
+  margin-left: 50px;
 }
 
 
 section#details div#infos p {
   font-size: 1rem;
   padding-bottom: 1rem;
-
   flex-wrap: wrap;
-}
+  margin-top: 1rem;
+  margin-left: 3px;
 
-section#details div#infos div#info-datail {
-  background-color: #ccc;
-  display: flex;
-  
-  align-items: center;
-  padding: 1rem;
-  padding-left: 1rem;
-  width: 100%;
-  border-radius: 1rem;
 }
 
 
@@ -402,7 +395,7 @@ section#details div#infos h2 {
   background-color: rgb(68, 211, 255);
   padding: 1rem;
   color: #fff;
-  border-radius: 1rem;
+  border-radius: 3rem;
   width: 30%;
   text-align: center;
   margin-top: 1rem;
@@ -436,5 +429,45 @@ section#details {
   box-shadow: 0 0 1rem #00000060;
   margin-left: 15%;
 }
+}
+
+.form{
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #051d40;;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #20529C;
 }
 
