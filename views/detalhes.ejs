@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" href="./img/pokedex.png"/>
-    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="/css/style.css" >
+    <title>Cadastrar Itens</title>
 </head>
-
 <body>
 
     <nav>
         <article id="logo">
             <h1><a href="/">desa<strong>Pega</strong></a></h1>
         </article>
-
+        
         <ul>
-            <li><a href="/catalogo">Catálogo</a></li>
-            <li><a href="/cadastro">Cadastrar Itens</a></li>
-        </ul>
+            <li><a href="/doacoes">Itens disponíveis</a></li>
+            <li><a href="/login">Realizar doação</a></li>
+            <li><a href="/dev">Quem somos</a></li>
+    </ul>
     </nav>
 
     <header>
@@ -47,15 +45,18 @@
                     <h4>UF: <%= produto.estado %></h4>
 
                     <h4>Informação adicional: <%= produto.info %></h4>
-
-                
-                </div>
+                    <br>
+                <button id="btnedit">Editar</button>
+                <button id="btndelete">Deletar item</button>
+                  </div>
             </div>
             <br>
         </div>
-
-
+        <br>
+    
+    
     </section>
+
 
     <script src="/js/script.js"></script>
 

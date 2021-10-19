@@ -15,22 +15,23 @@
         </article>
         
         <ul>
-            <li><a href="/doacoes">Doações</a></li>
-            <li><a href="/doar">Doar</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/dev">DEVs</a></li>
+            <li><a href="/doacoes">Itens disponíveis</a></li>
+            <li><a href="/login">Realizar doação</a></li>
+            <li><a href="/dev">Quem somos</a></li>
     </ul>
     </nav>
 
     <header>
-        <h1 id="cadit">Login de Clientes</h1>
+        <h1 id="cadit">Faça Login</h1>
     </header>
 
  
     <br><br><br>
 <div>
     <h2>Login</h2> 
-    <form action="/subscription" method="POST">
+     
+    <section id="formlogin">
+    <form action="/doar" method="POST">
         <div>
             <label for="email">E-mail: </label>
             <input type="email" name="email" id="email" placeholder="Digite seu email" required>
@@ -41,8 +42,8 @@
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
         </div>
     
-        <button type="submit">Inscrever-se</button>
+        <button id="btnlogin" type="submit">Entrar</button>
 
-        <p>Não tem cadastro? <a href="inscrever">Cadastro</a></p>
     </form>
     </div>
+</section>

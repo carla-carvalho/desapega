@@ -20,9 +20,9 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/doar", (req, res) => {
-  res.render("doar");
-});
+// app.get("/doar", (req, res) => {
+//   res.render("doar");
+// });
 
 app.get("/dev", (req, res) => {
   res.render("dev");
@@ -35,11 +35,25 @@ res.render("doacoes", {
   });
 });
 
+
 app.get("/login", (req, res) => {
-  res.render("login", {
-    desapega,
-    message
-    });
+    setTimeout(() => {
+      message = "";
+    }, 1000);
+    res.render("login", {message})
+  });
+
+app.post("/doar", (req, res) => {
+ const login = req.body.email
+ const senha = req.body.senha
+if (login == "blue@blue.com" && senha =="blue"){
+  res.render("doar");
+}
+
+else{
+  message = "Usuário ou senha inválidos"
+  res.render("login");
+}
   });
 
   app.get("/inscrever", (req, res) => {
@@ -54,6 +68,10 @@ app.post("/new", (req, res) => {
   desapega.push(produto);
   message = "Item cadastrado com sucesso!";
   res.redirect("/doacoes");
+});
+
+app.post("/doar", (req, res) => {
+  res.redirect("/doar");
 });
 
 app.get("/detalhes/:id", (req, res) => {

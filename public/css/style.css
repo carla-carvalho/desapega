@@ -12,7 +12,7 @@ body {
 }
 
 body{
-  background-color: rgb(116, 132, 194);
+  background-color:#b1d4e0;
 }
 nav {
   background-color: #fff;
@@ -22,9 +22,10 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 10;
-  border-radius: 0.5rem;
+
   
 }
+
 
 nav article {
   display: flex;
@@ -71,63 +72,82 @@ nav ul li a:hover {
 }
 
 header {
+  margin-top: auto;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  background-color: rgb(116, 132, 194);
-  padding: 6rem 3rem 3rem 3rem;
-  border-radius: 2rem;
+  background-color: #051d40;
+
 }
 
 #escolha{
   font-size: large;
+  color: #ccc;
 }
 
 #cadit{
   font-size: large;
+  color: #ccc;
 }
 
 #nomeitem{
   font-size: large;
+  color: #ccc;
 }
 header article h1 {
   color: #fff;
   font-size: 2rem;
-  margin: auto;
+  margin-left: 2px;
+  margin-right: 10rem;
 
 }
 
-header article p {
+header article h2 {
   color: #fff;
-  font-size: 2rem;
-  margin-left: 6rem;
+  font-size: 1.8rem;
+  margin-left: 2px;
+  font-style: normal;
+  margin-right: -4rem;
+}
+
+#chamada{
+  margin-right: 10rem;
+}
+header img {
+  width: 30%;
+  margin-bottom: 5%;
 }
 
 header img {
-  width: 50%;
-  margin: 0 auto;
+  width: 30%;
+  margin-bottom: 5%;
 }
+
 
 article#content{
-  background-color:rgb(149, 194, 207);
+  background-color: #b1d4e0;
   color: #051d40;
   padding: 3rem;
   border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
 
 }
 
+#textocontent{
+  margin-left: 3rem;
+}
+
+ 
 article#apresentacao{
-  background-color:  rgb(116, 132, 194);
-  color: #051d40;
+  background-color: #051d40;;
+  color: #f0f3f8;
   padding: 3rem;
-  border-radius: 1rem;
 
 }
 
 article#bio{
   padding: 5rem;
   background-color: #fff;
-  border-radius: 3rem;
   
 }
 
@@ -417,3 +437,4 @@ section#details {
   margin-left: 15%;
 }
 }
+
