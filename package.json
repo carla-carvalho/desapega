@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/carla-carvalho/todoando#readme",
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.14"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

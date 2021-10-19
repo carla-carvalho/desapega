@@ -27,25 +27,25 @@
 
     <section id="details">
         <h2 id="nomeitem">
-            <%= produto.titulo %><span style="font-weight: 50"></span>
+            <%= produto.nome_produto %><span style="font-weight: 50"></span>
         </h2>
         <img src="<%= produto.imagem %>" alt="">
         <div id="infos">
             <p id="descricao">
-                <%= produto.descricao %>    
+                <%= produto.descricao_produto %>    
             </p>
             <br>
             <div id="info-datail">
                 <div class='col' id="primeiraColuna">
-                    <h4>Tipo: <%= produto.tipo %></h4>
+                    <h4>Tipo: <%= produto.tipo_produto %></h4>
                 
-                    <h4>Categoria: <%= produto.categoria %></h4>
+                    <h4>Doação: <%= produto.nome_produto %></h4>
 
                     <h4>Bairro: <%= produto.bairro %></h4>
 
                     <h4>UF: <%= produto.estado %></h4>
 
-                    <h4>Informação adicional: <%= produto.info %></h4>
+                    <h4>Descrição da Doação: <%= produto.descricao_produto %></h4>
 
                     <br>
                 <button id="btnedit">Editar</button>
