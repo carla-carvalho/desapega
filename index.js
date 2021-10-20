@@ -10,7 +10,6 @@ app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
-
 app.get("/", (req, res) => {
   setTimeout(() => {
     message = "";
@@ -21,6 +20,9 @@ app.get("/", (req, res) => {
   });
 });
 
+// app.get("/doar", (req, res) => {
+//   res.render("doar");
+// });
 
 app.get("/dev", (req, res) => {
   res.render("dev");
