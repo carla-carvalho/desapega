@@ -31,7 +31,7 @@ app.get("/dev", (req, res) => {
 app.get("/doacoes", (req, res) => {
 res.render("doacoes", {
   desapega,
-  message
+  message,
   });
 });
 
@@ -40,7 +40,7 @@ app.get("/login", (req, res) => {
     setTimeout(() => {
       message = "";
     }, 1000);
-    res.render("login", {message})
+    res.render("login", {message})//ver virgula
   });
 
 app.post("/doar", (req, res) => {
@@ -59,14 +59,14 @@ else{
   app.get("/inscrever", (req, res) => {
     res.render("inscrever", {
       desapega,
-      message
+      message,
       });
     });
 
 app.post("/new", (req, res) => {
   const produto = req.body;
   desapega.push(produto);
-  message = "Item cadastrado com sucesso!";
+  message = "Item cadastrado com sucesso!",
   res.redirect("/doacoes");
 });
 
@@ -93,7 +93,7 @@ app.get("/editar/:id", async (req, res) => {
   }
 
   res.render("editar", {
-    produto, message
+    produto, message,
   });
 });
 
@@ -131,7 +131,7 @@ app.get("/deletar/:id", async (req, res) => {
   }
 
   res.render("deletar", {
-    produto, message
+    produto, message,
   });
 });
 
