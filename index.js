@@ -82,7 +82,74 @@ app.get("/detalhes/:id", (req, res) => {
   });
 });
 
+app.get("/editar/:id", async (req, res) => {
+  const produto = await Produto.findByPk(req.params.id);
 
+  if (!produto) {
+    res.render("editar", {
+      produto,
+      message: "Produto não encontrado!",
+    });
+  }
+
+  res.render("editar", {
+    produto, message
+  });
+});
+
+
+//U (Update) do meu CRUD - Aqui é onde eu faço a atualização (edição) dos dados de uma entrada
+app.post("/editar/:id", async (req, res) => {
+  const produto = await Produto.findByPk(req.params.id);
+
+  const { nome_produto, tipo_produto, descricao_produto, bairro, municipio, imagem } = req.body;
+  
+  produto.nome_produto = nome_produto;
+  produto.tipo_produto = tipo_produto;
+  produto.descricao_produto = descricao_produto;
+  produto.bairro = bairro;
+  produto.municipio = municipio;
+  produto.imagem = imagem;
+
+  const produtoEditado = await produto.save();
+
+  res.render("editar", {
+    produto: produtoEditado,
+    message: "Produto editado com sucesso!",
+  });
+});
+
+
+app.get("/deletar/:id", async (req, res) => {
+  const produto = await Produto.findByPk(req.params.id);
+
+  if (!produto) {
+    res.render("deletar", {
+      produto,
+      message: "Doação não encontrada!",
+    });
+  }
+
+  res.render("deletar", {
+    produto, message
+  });
+});
+
+
+
+app.post("/deletar/:id", async (req, res) => {
+  const produto = await Produto.findByPk(req.params.id);
+
+  if (!produto) {
+    res.render("deletar", {
+      mensagem: "Doação não encontrado!",
+    });
+  }
+
+  await produto.destroy();
+
+  res.redirect("/");
+});
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)

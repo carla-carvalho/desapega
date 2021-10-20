@@ -27,7 +27,7 @@
 
     <section id="details">
         <h2 id="nomeitem">
-            <%= produto.titulo %><span style="font-weight: 50"></span>
+            <%= produto.nome_produto %><span style="font-weight: 50"></span>
         </h2>
         <img src="<%= produto.imagem %>" alt="">
         <div id="infos">
@@ -48,8 +48,8 @@
                     <h4>Informação adicional: <%= produto.info %></h4>
 
                     <br>
-                <button id="btnedit">Editar</button>
-                <button id="btndelete">Deletar item</button>
+                    <a id= bt  href="/deletar/<%= produto.id %>"><button type="button" class="btn btn-primary">Deletar</button></a>
+                    <a id= bt  href="/editar/<%= produto.id %>"><button type="button" class="btn btn-primary">Editar</button></a>
                   </div>
             </div>
             <br>

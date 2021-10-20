@@ -15,15 +15,16 @@
         </article>
         
         <ul>
-            <li><a href="/doacoes">Doações disponíveis</a></li>
+            <li><a href="/doacoes">Itens disponíveis</a></li>
             <li><a href="/login">Realizar doação</a></li>
             <li><a href="/dev">Quem somos</a></li>
-        </ul>
+    </ul>
     </nav>
 
     <header>
        
     </header>
+
     <% if(message != "") {  %>
         <section id="message">
             <p><%= message %></p> <span id="close">&times;</span>
@@ -33,7 +34,7 @@
     <% if(produto != null) {  %>
     <section id="inscrever">
 
-        <form action="/deletar/<%= produto.id %>" method="POST">
+        <form action="/editar/<%= produto.id %>" method="POST">
             <div>
                 <label for="nome_produto">Nome do Produto: </label>
                 <input type="text" name="nome_produto" id="nome_produto" placeholder="Informe o nome do produto" value="<%= produto.nome_produto %>">
@@ -62,16 +63,14 @@
             <div>
                 <label for="imagem">Imagem: </label>
                 <input type="text" name="imagem" id="imagem" placeholder="Digite o link da imagem" value="<%= produto.imagem %>">
-            </div>
+            </div>   
         
-            <button type="submit">Deletar!</button>
-            
+            <button type="submit">Editar</button>
         </form>
     </section>
     <% }  %>
 
     <script src="/public/js/script.js"></script>
-
 </body>
 
 </html>
