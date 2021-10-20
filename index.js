@@ -83,12 +83,12 @@ app.get("/detalhes/:id", (req, res) => {
 });
 
 app.get("/editar/:id", async (req, res) => {
-  const produto = await Filme.findByPk(req.params.id);
+  const produto = await produto.findByPk(req.params.id);
 
   if (!produto) {
     res.render("editar", {
       produto,
-      message: "Filme não encontrado!",
+      message: "Produto não encontrado!",
     });
   }
 
@@ -123,12 +123,12 @@ app.post("/editar/:id", async (req, res) => {
 
 
 app.get("/deletar/:id", async (req, res) => {
-  const produto = await Filme.findByPk(req.params.id);
+  const produto = await Produto.findByPk(req.params.id);
 
   if (!produto) {
     res.render("deletar", {
       produto,
-      message: "Filme não encontrado!",
+      message: "Produto não encontrado!",
     });
   }
 
