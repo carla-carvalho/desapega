@@ -6,6 +6,7 @@ const port = process.env.PORT || 5000;
 const desapega = [];
 let message = "";
 
+const Produto = require("./models/projeto");
 app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
@@ -31,7 +32,7 @@ app.get("/dev", (req, res) => {
 app.get("/doacoes", (req, res) => {
 res.render("doacoes", {
   desapega,
-  message
+  message,
   });
 });
 
@@ -40,7 +41,7 @@ app.get("/login", (req, res) => {
     setTimeout(() => {
       message = "";
     }, 1000);
-    res.render("login", {message})
+    res.render("login", {message})//ver virgula
   });
 
 app.post("/doar", (req, res) => {
@@ -59,14 +60,14 @@ else{
   app.get("/inscrever", (req, res) => {
     res.render("inscrever", {
       desapega,
-      message
+      message,
       });
     });
 
 app.post("/new", (req, res) => {
   const produto = req.body;
   desapega.push(produto);
-  message = "Item cadastrado com sucesso!";
+  message = "Item cadastrado com sucesso!",
   res.redirect("/doacoes");
 });
 
@@ -98,6 +99,8 @@ app.get("/editar/:id", async (req, res) => {
 });
 
 
+
+
 //U (Update) do meu CRUD - Aqui é onde eu faço a atualização (edição) dos dados de uma entrada
 app.post("/editar/:id", async (req, res) => {
   const produto = await Produto.findByPk(req.params.id);
@@ -119,14 +122,13 @@ app.post("/editar/:id", async (req, res) => {
   });
 });
 
-
 app.get("/deletar/:id", async (req, res) => {
   const produto = await Produto.findByPk(req.params.id);
 
   if (!produto) {
     res.render("deletar", {
       produto,
-      message: "Doação não encontrada!",
+      message: "Produto não encontrado!",
     });
   }
 
