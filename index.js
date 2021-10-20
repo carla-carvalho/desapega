@@ -83,19 +83,21 @@ app.get("/detalhes/:id", (req, res) => {
 });
 
 app.get("/editar/:id", async (req, res) => {
-  const produto = await Produto.findByPk(req.params.id);
+  const produto = await Filme.findByPk(req.params.id);
 
   if (!produto) {
     res.render("editar", {
       produto,
-      message: "Produto não encontrado!",
+      message: "Filme não encontrado!",
     });
   }
 
   res.render("editar", {
-    produto, message,
+    produto, message
   });
 });
+
+
 
 
 //U (Update) do meu CRUD - Aqui é onde eu faço a atualização (edição) dos dados de uma entrada
@@ -121,17 +123,17 @@ app.post("/editar/:id", async (req, res) => {
 
 
 app.get("/deletar/:id", async (req, res) => {
-  const produto = await Produto.findByPk(req.params.id);
+  const produto = await Filme.findByPk(req.params.id);
 
   if (!produto) {
     res.render("deletar", {
       produto,
-      message: "Doação não encontrada!",
+      message: "Filme não encontrado!",
     });
   }
 
   res.render("deletar", {
-    produto, message,
+    produto, message
   });
 });
 
