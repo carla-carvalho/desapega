@@ -48,9 +48,14 @@
                     <h4>Informação adicional: <%= produto.info %></h4>
 
                     <br>
+                    <form action="/deletar" method="POST">
                     <a id= bt  href="/deletar/<%= produto.id %>"><button type="button" class="btn btn-primary">Deletar</button></a>
+                    </form>
+
+                    <form action="/editar" method="POST"></form>
                     <a id= bt  href="/editar/<%= produto.id %>"><button type="button" class="btn btn-primary">Editar</button></a>
-                  </div>
+                    </form>
+                </div>
             </div>
             <br>
         </div>
