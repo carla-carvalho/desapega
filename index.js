@@ -83,7 +83,7 @@ app.get("/detalhes/:id", (req, res) => {
 });
 
 app.get("/editar/:id", async (req, res) => {
-  const produto = await produto.findByPk(req.params.id);
+  const produto = await Produto.findByPk(req.params.id);
 
   if (!produto) {
     res.render("editar", {
